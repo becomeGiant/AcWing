@@ -1,4 +1,5 @@
 前缀和：可以预处理数据，把计算两个区间的值从O(n)优化为O(1)
+本题为一维区间
 
 #include<bits/stdc++.h>
 using namespace std;
