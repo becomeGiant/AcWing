@@ -1,12 +1,15 @@
+离散化思想：
+从稀疏到稠密的过程，即存在映射关系
+
 #include<bits/stdc++.h>
 using namespace std;
 
 const int N=3e5+10;
 typedef pair<int,int> PII;
 int n,m;
-int a[N],s[N];
-vector<int> alls;
 vector<PII> add,query;
+vector<int> alls;           //下标集合
+int a[N],s[N];
 
 int find(int x)
 {
@@ -22,12 +25,11 @@ int find(int x)
 
 int main()
 {
-    int n,m;
     cin>>n>>m;
     for(int i=0,j,k;i<n;i++)
     {
         cin>>j>>k;
-        add.push_back({j,k});
+        add.push_back({j,k});       //在j处加k
         alls.push_back(j);
     }
     for(int i=0,j,k;i<m;i++)
@@ -37,14 +39,14 @@ int main()
         alls.push_back(j);
         alls.push_back(k);
     }
-    sort(alls.begin(),alls.end());
-    alls.erase(unique(alls.begin(),alls.end()),alls.end());
+    sort(alls.begin(),alls.end());                              //为去重和二分做准备
+    alls.erase(unique(alls.begin(),alls.end()),alls.end());     //去重，保证下标唯一
     for(auto i:add)
     {
-        int x=find(i.first);
+        int x=find(i.first);        //二分查找作为映射公式
         a[x]+=i.second;
     }
-    for(int i=1;i<=alls.size();i++)
+    for(int i=1;i<=alls.size();i++)     //前缀和
         s[i]=s[i-1]+a[i];
     for(auto i:query)
     {
