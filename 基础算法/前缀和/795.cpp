@@ -13,7 +13,7 @@ int main()
     cin>>n>>m;
     for(int i=1;i<=n;i++)
         cin>>a[i];
-    for(int i=1;i<=n;i++)
+    for(int i=1;i<=n;i++)   //编号从1开始可以避免边界问题
         s[i]=s[i-1]+a[i];
     for(int i=0,j,k;i<m;i++)
     {
