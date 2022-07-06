@@ -19,13 +19,14 @@ vector<int> add(vector<int> &a,vector<int> &b)
     return c;
 }
 
-bool cmp(vector<int> &a,vector<int> &b)
+bool cmp(vector<int> a,vector<int> b)
 {
     if(a.size()!=b.size())
         return a.size()>b.size();
-    for(int i=0;i<a.size();i++)
+    for(int i=a.size()-1;i>=0;i--)
         if(a[i]!=b[i])
             return a[i]>b[i];
+    return true;
 }
 
 int main()
