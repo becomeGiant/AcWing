@@ -1,3 +1,7 @@
+并查集：
+1.两个集合合并
+2.询问两个元素是否在一个集合中
+
 #include<bits/stdc++.h>
 using namespace std;
 
