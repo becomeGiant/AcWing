@@ -5,7 +5,7 @@ const int N=1e2+10,M=1e4+10;
 int n,m;
 int a[N],f[M];
 
-int sg(int x)   //SG函数(SG(x)=mex{SG(y) | y是x的后继})
+int sg(int x)   //SG函数(SG(x)=mex{SG(y) | y是x的后继}，SG(终点)=0)
 {
     if(f[x]!=-1)    //记忆化搜索
         return f[x];
