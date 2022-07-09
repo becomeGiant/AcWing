@@ -2,6 +2,7 @@
 状态表示：同完全背包
 状态转移：同完全背包，但是区别：数量限制
 
+无优化
 #include<bits/stdc++.h>
 using namespace std;
 
