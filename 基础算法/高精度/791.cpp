@@ -15,7 +15,7 @@ vector<int> add(vector<int> &a,vector<int> &b)
         c.push_back(temp%10);
         temp/=10;
     }
-    if(temp) c.push_back(temp);
+    if(temp) c.push_back(temp);     //最高位进位
     return c;
 }
 
@@ -32,7 +32,7 @@ bool cmp(vector<int> a,vector<int> b)
 int main()
 {
     cin>>a>>b;
-    for(int i=a.size()-1;i>=0;i--)
+    for(int i=a.size()-1;i>=0;i--)      //小端存储，方便最高位进位
         A.push_back(a[i]-'0');
     for(int i=b.size()-1;i>=0;i--)
         B.push_back(b[i]-'0');
