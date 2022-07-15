@@ -21,7 +21,7 @@ int f[N][N];
 
 int main()
 {
-    // fill(f[0],f[0]+N*N,inf);
+    // fill(f[0],f[0]+N*N,inf);   //f[0,0]上的值不是0
     cin>>n;
     for(int i=1;i<=n;i++)
         cin>>a[i];
