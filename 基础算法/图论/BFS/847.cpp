@@ -17,14 +17,14 @@ void bfs()
     dist[1]=0;
     while(!q.empty())
     {
-        int cur=q.front();
+        int cur=q.front();      //取队头
         q.pop();
         for(auto i:graph[cur])
         {
             if(dist[i]==-1)
             {
                 dist[i]=dist[cur]+1;
-                q.push(i);
+                q.push(i);      //拓展队头
             }
         }
     }
