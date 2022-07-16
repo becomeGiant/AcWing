@@ -1,3 +1,7 @@
+BFS:
+1.边权为1
+2.具有层次顺序
+
 #include<bits/stdc++.h>
 using namespace std;
 
