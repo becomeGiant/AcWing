@@ -1,3 +1,5 @@
+模板与dijkstra几乎一样
+
 #include<bits/stdc++.h>
 using namespace std;
 
