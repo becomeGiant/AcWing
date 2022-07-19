@@ -49,7 +49,7 @@ int main()
         e.push_back(temp);
     }
     bellmanFord();
-    if(dist[n]>inf>>1)
+    if(dist[n]>inf>>1)    //可能存在负权边，所以dist不会完全等于inf
         cout<<"impossible";
     else
         cout<<dist[n];
