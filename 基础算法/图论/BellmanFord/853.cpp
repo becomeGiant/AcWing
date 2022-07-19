@@ -11,3 +11,46 @@ for N次(经过不超过N条边的最短路)
 1--->2--->3   1--->3
 第一次迭代：利用上次的dist(backup)更新1-2,2-3,1-3，结果为0,1,3(2-3更新的结果是无穷+1)
 第二次迭代：利用上次的dist(backup)更新1-2,2-3,1-3，结果为0,1,2
+
+#include<bits/stdc++.h>
+using namespace std;
+
+const int N=510;
+const int inf=1e9;
+struct Edge
+{
+    int a,b,w;
+};
+int n,m,k;
+vector<Edge> e;
+int dist[N],backup[N];
+
+void bellmanFord()
+{
+    fill(dist,dist+N,inf);    //初始化
+    dist[1]=0;
+    for(int i=0;i<k;i++)
+    {
+        memcpy(backup,dist,sizeof(dist));
+        for(auto j:e)
+        {
+            dist[j.b]=min(dist[j.b],backup[j.a]+j.w);
+        }
+    }
+}
+
+int main()
+{
+    cin>>n>>m>>k;
+    for(int i=0;i<m;i++)
+    {
+        Edge temp;
+        cin>>temp.a>>temp.b>>temp.w;
+        e.push_back(temp);
+    }
+    bellmanFord();
+    if(dist[n]>inf>>1)
+        cout<<"impossible";
+    else
+        cout<<dist[n];
+}
