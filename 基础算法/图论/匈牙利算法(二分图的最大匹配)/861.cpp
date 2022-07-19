@@ -12,7 +12,7 @@ using namespace std;
 const int N=1e5+10;
 int n1,n2,m;
 vector<int> e[N];
-bool visited[N];
+bool visited[N];  //DFS需要的标记数组
 int match[N];
 
 bool find(int x)
