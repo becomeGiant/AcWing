@@ -24,7 +24,7 @@ void bfs()
         for(int i=0;i<4;i++)
         {
             int nextx=cur.first+dx[i],nexty=cur.second+dy[i];
-            if(nextx>=0&&nextx<n&&nexty>=0&&nexty<m&&graph[nextx][nexty]==0&&dist[nextx][nexty]==-1)
+            if(nextx>=0&&nextx<n&&nexty>=0&&nexty<m&&graph[nextx][nexty]==0&&dist[nextx][nexty]==-1)    //还未访问过
             {
                 dist[nextx][nexty]=dist[cur.first][cur.second]+1;
                 q.push({nextx,nexty});    //拓展队头
