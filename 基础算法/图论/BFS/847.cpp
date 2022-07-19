@@ -21,7 +21,7 @@ void bfs()
         q.pop();
         for(auto i:graph[cur])
         {
-            if(dist[i]==-1)
+            if(dist[i]==-1)     //还未访问过
             {
                 dist[i]=dist[cur]+1;
                 q.push(i);      //拓展队头
