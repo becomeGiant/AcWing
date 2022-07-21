@@ -1,7 +1,7 @@
 start---...--->a--->b
 根据SPFA的松弛操作：dist[b]=min(dist[b],dist[a]+w)，表示从a到b具有更小的距离
 cnt[b]=cnt[a]+1
-cnt[b]表示从起点(start)到b中所有的点的数量，即上述表示b拥有的点数为从start到a再加上b
+cnt[b]表示从起点(start)到b中所有的边数，即上述表示b拥有的边数为从start到a再加上1
 根据抽屉原理，如果一条点数为n的路径上具有≥n的边数，则必存在重复的点
 
 #include<bits/stdc++.h>
