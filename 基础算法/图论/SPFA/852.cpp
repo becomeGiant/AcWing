@@ -23,9 +23,9 @@ int cnt[N];
 bool spfa()
 {
     fill(dist,dist+N,inf);
-    dist[1]=0;
     for(int i=1;i<=n;i++)
     {
+        dist[i]=0;
         q.push(i);
         visited[i]=true;
     }
