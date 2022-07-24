@@ -5,7 +5,7 @@ int main()
 {
     int n;
     cin>>n;
-    priority_queue<int,vector<int>,greater<int>> heap;
+    priority_queue<int,vector<int>,greater<int>> heap;  //优先队列
     for(int i=0;i<n;i++)
     {
         int x;
