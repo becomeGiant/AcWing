@@ -1,4 +1,5 @@
-1.欧几里得算法(辗转相除法)
+1.最大公约数
+  欧几里得算法(辗转相除法)
   
 #include<bits/stdc++.h>
 using namespace std;
