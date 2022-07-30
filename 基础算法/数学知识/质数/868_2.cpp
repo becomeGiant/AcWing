@@ -23,7 +23,7 @@ int main()
         for(int j=0;primes[j]<=n/i;j++)
         {
             state[primes[j]*i]=true;
-            if(i%primes[j]==0)
+            if(i%primes[j]==0)  //primes[j]是最小质因子
                 break;
         }
     }
