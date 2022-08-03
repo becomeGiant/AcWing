@@ -1,3 +1,10 @@
+拓展欧几里得算法 的应用
+
+裴属定理：ax+by=d
+目标公式：ax%m=b
+  ax+(-my)=b (y=ax/m)
+  
+
 #include<bits/stdc++.h>
 using namespace std;
 
