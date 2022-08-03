@@ -1,6 +1,11 @@
 由 拓展欧几里得算法 实现 裴属定理
-列出两个公式可以推出结果(注意x和y的互换)
-    
+
+列出两个公式可以推出结果
+欧几里得：(a,b)=(b,a%b)=d
+裴属定理：ax+by=d
+    bx+(a%b)y=d
+    ay+b(x-a/b*y)=d
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -15,7 +20,7 @@ int exgcd(int a,int b,int &x,int &y)
     int temp=x;
     x=y;
     y=temp-a/b*y;
-    // cout<<"x:"<<x<<" y:"<<y<<endl;
+    cout<<"x:"<<x<<" y:"<<y<<endl;
     return d;
 }
 
